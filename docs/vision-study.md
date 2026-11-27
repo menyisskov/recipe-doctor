@@ -1,47 +1,58 @@
-# תוכנית איסוף, תיוג ומדידה
+# Vision study plan
 
-## איסוף בהסכמה
+## Collection and consent
 
-יעד פתיחה מוצע הוא 8–12 מטבחים ו־2 סצנות בכל מטבח, אחת של מקרר ואחת של מזווה. לכל סצנה נבקש תמונה רחבה ותקריב מאותו מצב. נכסה אור חלש, עומס, תוויות בעברית, אריזות דומות, השתקפויות וקופסאות אטומות. נכלול אייפון ואנדרואיד, וכן סצנה ברורה מכל סוג כנקודת השוואה. סט קטן מאפשר לזהות כשלים שכיחים ולהעריך עלויות ראשוניות.
+Start with 8 to 12 kitchens. In each kitchen collect one fridge scene and one pantry scene when available. Record a wide photo and one or more close-ups of the same setup. Include weak light, clutter, reflections, opaque containers, similar packaging, and Hebrew labels. Cover iPhone and Android and include clear scenes for comparison.
 
-1. לפני הצילום, מציגים למשתתף מי יראה את החומר, למטרת מה, כמה זמן יישמר ואיך מבקשים מחיקה. מתעדים בנפרד הסכמה למחקר מקומי והסכמה להעברה לספק מזוהה, לאחר בדיקת תנאי השמירה שלו והצגתם למשתתף. סירוב לעיבוד בענן עדיין מאפשר השתתפות במדידה הידנית.
-2. מבקשים להימנע מאנשים, מסמכים, תרופות, שמות או פרטי משלוח. סוקרים כל קובץ לפני תיוג או העלאה. תמונה עם פרט אישי מוחלפת או עוברת חיתוך מקומי בהסכמה, ואז נבדקת שוב. מסירים מטא־דאטה ושמות קובץ מקוריים.
-3. מקצים מזהי מטבח, סצנה ותמונה אקראיים. שומרים את הקבצים והתיוגים באחסון פרטי עם הרשאות מוגבלות לצוות המחקר. פרטי קשר והסכמות שמורים בנפרד עם מיפוי מינימלי. במאגר GitHub ובדוח ציבורי ייכללו רק נתונים מצרפיים ודוגמאות סינתטיות.
-4. לפני גיוס קובעים אחראי, מקום אחסון, ערוץ פנייה ותקופת שמירה מוסכמת. הצעת פתיחה למחקר היא מחיקת החומר הגולמי עד 30 יום מסיום הניסוי, בכפוף להסכמה ולמדיניות הספק. ביומן מחיקה פרטי מתעדים את הפעולה ומטפלים בבקשות מחיקה לפי המזהה. מסבירים מראש אילו פעולות מחיקה אפשר לבצע גם אצל הספק.
+Before collection, give participants a contact and explain the purpose, who can access the content, where and for how long it will be kept, and how to request deletion. Record permission for local research separately from permission to send photos to the specifically named provider. Verify the provider's retention controls on the selected account before obtaining the latter permission. A participant who declines cloud processing may still take part in the manual baseline.
 
-### נוסח פתיחה מוצע למשתתפים
+Ask participants to omit people, papers, medication, names, and shipping information. Replace or crop accidental personal content locally with permission before use. Remove metadata and original filenames. Assign pseudonymous kitchen, scene, and image IDs. Store research data and consent records separately in restricted private storage. Publish only aggregate findings and synthetic examples. Before recruitment, assign an owner, contact channel, storage location, and retention period. A proposed local research retention period is up to 30 days after the study ends, subject to the agreed policy.
 
-> אנחנו בודקים אם צילום מקרר ומזווה מקצר את הדרך למתכון. ההשתתפות מרצון. נשתמש בתמונות למדידת זיהוי מצרכים ונשמור אותן באחסון פרטי עד המועד שהוצג לך. אפשר לבקש מחיקה דרך איש הקשר שקיבלת. נבקש אישור נפרד לפני שליחה לספק העיבוד ונציג את שמו ואת תנאי שמירת המידע שלו. בבקשה הוציאו מהפריים פרטים אישיים ותמונות של אנשים.
+## Annotation and study split
 
-## תיוג
-
-| רשומה | שדות |
+| Record | Fields |
 |---|---|
-| תמונה | `image_id`, `scene_id`, `household_id`, מקרר או מזווה, צילום רחב או תקריב, משפחת מכשיר, תאורה, עומס וגרסת מילון. |
-| מצרך נראה | `image_id`, מזהה מצרך במילון או קטגוריית `out_of_catalog` ושם מצרך כללי, מצב נראות, סוג רמז וחיווי אם התווית בעברית. יש לרשום כל סוג פעם אחת לכל תמונה. |
-| הרצת ניסוי | מזהה הרצה וסצנה, תצורת צילום, גרסאות מילון והנחיה, תצורת מודל, משך, סטטוס, ניסיונות, צריכה ועלות לפי מידע החיוב הזמין. |
-| משימת משתמש | מזהה משימה וסצנה, מסלול, סדר ביצוע, זמני התחלה וסיום, התאמה, בדיקת כמות, ספירות תיקונים וסיבת אי־השלמה אם נצפתה. |
+| Photo | Anonymous kitchen, scene and photo IDs, fridge or pantry, wide or close-up, device family, lighting, clutter and catalog version. |
+| Ingredient | Photo ID, catalog ID or a generic out-of-catalog name, clear or ambiguous visibility, visual or label evidence, and whether the label was in Hebrew. Record each type once per image. |
+| Evaluation | Scene, scan configuration, model and prompt versions, status, duration, attempts and cost if available. |
+| Participant task | Task and scene IDs, route, execution order, start/end, matching result, quantity confirmation, correction counts and reason for an incomplete task if observed. |
 
-- **ברור** הוא מצרך שהמתייג מסוגל לזהות ישירות לפי המראה או תווית קריאה. **עמום** הוא רמז שאינו מספיק לקבוע מזהה יחיד. **מוסתר** הוא פריט שתכולתו אינה ראיה חזותית. לדוגמה, קופסה סגורה ללא תווית נשארת מחוץ לרשימת המצרכים הברורים.
-- פריט ברור מחוץ למילון נרשם בנפרד כדי למדוד כיסוי מילון. הוא לא נחשב החמצת מודל במדד הראשי. הצעות חופשיות יוערכו בנפרד לפי התאמה לשם שתויג. סוג הרמז נרשם כראייה חזותית, תווית או שניהם. אין צורך להעתיק תוויות.
-- התיוג ייעשה לפני צפייה בפלט המודל. מתייג שני יבדוק את מדגם ההערכה ואת המקרים העמומים בסט הפיתוח. מחלוקות יוכרעו לפני הרצת ההערכה. אם אין הכרעה, הפריט יישאר עמום.
-- משאירים מראש כ־25% מהמטבחים להערכה סופית, כולל תמונות משני סוגי הסצנה לפי הזמינות. כל התמונות והתקריבים של אותו מטבח יהיו באותו סט. שומרים את סט ההערכה מחוץ לכוונון ההנחיה, בחירת המודל ועדכוני המילון, ומקפיאים את גרסאותיהם לפני הבדיקה הסופית.
+Mark an item clear only when a person can identify it by sight or from a readable label. Mark evidence that could fit multiple ingredients ambiguous. Exclude hidden contents of unlabeled opaque containers from ground truth. Track confirmed out-of-catalog items separately as coverage gaps. Do not transcribe photographed labels.
 
-## מדידת בסיס וניסוי
+Annotate before seeing provider results. Have a second annotator verify the holdout and disagreements on development data. Resolve disagreements in advance or retain an ambiguous label. Set aside about one quarter of kitchens for final evaluation, with all photos from a kitchen in the same split. Freeze the catalog, model, image settings and prompt before opening the holdout.
 
-**בשלב הראשון** מודדים בידני את הזמן מהתחלת ההזנה עד לפתיחת מתכון מתאים. עד שהאתר ייבנה, משתמשים בטופס הזנה מאובטח או בתרגיל מתוזמן עם מקבץ קטן של כרטיסי מתכון וכללי התאמה קבועים. מתעדים את סביבת המדידה. בפיילוט חוזרים על המדידה במוצר עצמו.
+## Runs and success metrics
 
-**בניסוי הזיהוי** מריצים לכל סצנה את התמונה הרחבה לבדה ואז רחבה עם תקריב, עם אותו מילון ואותן הגדרות ספק לכל השוואה. לכל תצורה משתמשים רק בתוויות הברורות שנראות באותן תמונות כבסיס למדדי זיהוי. בנוסף משווים כמה מצרכים נכונים נמצאו מתוך האיחוד של הרחבה והתקריב, כדי למדוד את תרומת התקריב לכיסוי הסצנה. משווים מודלים לפי איכות, קריאת תוויות בעברית, זמן, עלות ותנאי שמירה שנבדקו.
+Use a timed manual entry task with a fixed recipe catalog for the early baseline. On the app, have participants use both routes on separate comparable scenes. Counterbalance route order. Measure from first entry action, capture or upload through opening a matching recipe, including confirmation and corrections. Keep the same recipe catalog and completion criterion for both routes. Record incomplete tasks, failures and abandonment.
 
-**בהשוואת זמן במוצר** אותם משתתפים יבצעו משימות דומות בשני המסלולים על סצנות שונות ברמת קושי דומה. מחליפים את סדר המסלולים בין משתתפים כדי לצמצם את השפעת ההיכרות. מסלול צילום נמדד מתחילת הצילום או ההעלאה וכולל עיבוד, תיקונים וזמן בחירת מתכון. המסלול הידני נמדד מהתחלת ההזנה וכולל זמן בחירה. משתמשים באותו מאגר מתכונים ובאותו כלל סיום בשני המסלולים. מדווחים בנפרד משימות ללא התאמה, כשלים ונטישות.
+Compare wide-only against wide plus close-up for each scene. Measure precision and missed items against the visible ground truth in each condition. Also compare detected coverage against the combined ground truth to estimate the value of the close-up. Compare providers by recognition, correction effort, ability to read Hebrew packaging, response time, price and approved retention settings.
 
-| מדד | חישוב |
+| Outcome | Calculation |
 |---|---|
-| זמן עד מתכון | חציון ו־P90 לזמן עד פתיחת מתכון מתאים במשימות שהושלמו, לצד שיעור השלמה מכל המשימות שהתחילו. |
-| הצעות שאושרו | הצעות ייחודיות שאושרו עם השיוך המקורי חלקי כלל ההצעות הייחודיות שהוצגו בסריקות שהגיעו לסקירה. מציגים בנפרד מקרים ללא הצעות. |
-| דיוק והחמצות | אמת מידה היא קבוצת מזהי המילון שתויגו כברורים ונראים בתמונות שנשלחו. דיוק הוא חיתוך ההצעות המשויכות עם קבוצת האמת חלקי מספר ההצעות המשויכות. שיעור החמצה הוא מזהי אמת שלא הופיעו בהצעות חלקי גודל קבוצת האמת. הצעות תואמות לתווית עמומה מדווחות בנפרד ומוצגות כלא מאומתות במדד הדיוק. |
-| עבודת תיקון | ספירת הוספות, הסרות ושינויי שיוך בפועל לכל סקירה, כולל הוספות שנדרשו אחרי תשובה ריקה. |
-| כיסוי מתכונים | סריקות שהניבו לפחות מתכון אחד אחרי אישור חלקי כלל הסריקות שהתחילו. מתוך המשתתפים שפתחו מתכון ובדקו את הכמויות, מדווחים את שיעור מי שאישרו שיש להם מספיק. מדווחים גם את מספר מי שלא ענו. |
-| פענוח ועלות | חציון ו־P90 מזמן שליחה עד תשובה סופית. שיעור הכשלים הוא סריקות שהסתיימו בכשל חלקי סריקות שנשלחו. עלות ממוצעת כוללת גם ניסיונות חוזרים ועלות מדווחת של בקשות כושלות, בחלוקה למספר הסריקות שנשלחו. |
+| Time to recipe | Median and P90 among completed tasks, reported alongside the completion rate among all tasks started. |
+| Suggestion acceptance | Suggestions confirmed with the original catalog ID divided by all unique suggestions shown. Report empty scans separately. |
+| Precision and miss rate | Correct suggested IDs divided by suggested catalog IDs. Missed clear in-catalog IDs divided by all clear in-catalog IDs. Keep ambiguous and out-of-catalog findings separate. |
+| Correction effort | Per-scan additions, removals and changed catalog links, including manual additions after an empty scan. |
+| Recipe coverage | Scans leading to at least one matched recipe divided by scans started. Report the proportion of users who confirmed sufficient quantities among people who opened a recipe and answered, with missing answers counted separately. |
+| Latency, failures and cost | Median and P90 from submission to final response. Divide failed scans by submitted scans. Average any known costs across scans, including retries and failed submissions with known usage. |
 
-מדווחים בנפרד על מקרר ומזווה ומציגים את גודל המדגם והמכנים. מדד עם מכנה אפס יסומן כחסר. עלות ללא נתוני צריכה או חיוב תסומן כחסרה או כאומדן עם שיטת החישוב. לפני פיילוט נועלים ספי הצלחה מספריים על בסיס המדידה הראשונית, כולל שיפור בזמן, שיעור השלמה, החמצות, תיקונים, כיסוי, כשלים ועלות. תוצאות של 8–12 מטבחים ישמשו לתעדוף ולבחירת ניסוי המשך.
+Report fridge and pantry results separately with denominators. Mark unavailable costs or zero-denominator metrics as missing. Set numeric launch targets after the initial measurement and before the pilot. Use the pilot readout to separate capture issues, provider errors, catalog gaps and insufficient quantities.
+
+## Run the private evaluation
+
+Place a JSON manifest and approved photos in the same private directory, outside Git. This is a synthetic example of the manifest shape.
+
+```json
+[
+  {
+    "kitchen": "k01",
+    "category": "fridge",
+    "split": "development",
+    "consentForProvider": false,
+    "wide": { "file": "wide.jpg", "visibleIds": ["egg"] },
+    "closeups": [{ "file": "detail.jpg", "visibleIds": ["egg", "tomato"] }]
+  }
+]
+```
+
+Run the local app with the chosen vision settings. Launch the study command with the same environment and set `STUDY_APP_URL` to the local origin. Use `npm run study:vision -- <private-manifest-path> development` to compare wide and combined scans. After freezing the configuration, repeat using `holdout`. For a paid provider run, also set `STUDY_ALLOW_PROVIDER=true` after permission to incur cost and participant consent for the named provider. The command checks consent before sending any photo and emits aggregate metrics only. Use app logs to reconcile attempts and reported cost, and use the participant session records for the manual baseline, confirmation and correction metrics.

@@ -1,42 +1,36 @@
-# אפיון אבן דרך 1
+# Product specification
 
-## מסלול השימוש
+## User flow
 
-| מצב | פעולות ומעבר |
+| Stage | Interaction |
 |---|---|
-| התחלה | מציגים ״צלמו או העלו תמונה״ ו״הוסיפו מצרכים ידנית״. שני המסלולים מובילים לאותה רשימת מצרכים מאושרת. אפשר לשחזר רשימה קודמת מהמכשיר או לאפס אותה. |
-| תמונות | מצלמים או בוחרים תמונה אחת להתחלה. רואים תצוגה מקדימה ויכולים להחליף, להסיר או להוסיף תקריבים. לפני השליחה מוצג הסבר על עיבוד התמונות בענן, עם פעולה מפורשת לשליחה. הדפדפן מקודד תמונה מחדש ללא מטא־דאטה ובגודל שמותאם לקריאות תוויות. |
-| עיבוד | מסמנים טעינה ומאפשרים להמשיך לערוך ידנית. כשיש כשל, שומרים את הרשימה המאושרת ומציעים ניסיון חוזר או המשך ידני. פורמט שאי אפשר לקרוא יקבל הודעה שמציעה צילום מחדש או העלאת קובץ נתמך. תשובה תקינה וריקה תציג אפשרות לתקריב או להוספה ידנית. |
-| סקירה | מאחדים הצעות בעלות אותו מזהה ומציגים את תמונות המקור לפי הצורך. רק הצעות ודאיות ששויכו למילון נכללות ב״אשרו את ההצעות המסומנות״. כל הצעה לא ודאית דורשת פעולה מפורשת עבורה. אפשר לתקן שיוך, להסיר, להוסיף או לשמור פריט חופשי. |
-| רשימה ותוצאות | תוצאות מתעדכנות מיד אחרי שינוי ברשימה המאושרת. המשתמש יכול לבחור במפורש מצרכי בסיס ולשמור אותם במכשיר. בכרטיס מופיעים שם, תיאור, דקות ומנות. אם אין התאמה מלאה, מציגים ״אין כרגע מתכון מתאים במאגר״ עם קישור לעריכת המצרכים. |
-| מתכון | מוצגים כמות ויחידה לכל מצרך, מצרכים אופציונליים, התחליף שנבחר אם חל, ציוד ושלבים. המסך מבקש לוודא שהכמויות מספיקות. |
+| Start | Take or upload a photo, or add ingredients by hand. Both paths update the same confirmed list. The device restores saved ingredients and staples and offers a reset. |
+| Photos | Start with one photo. Preview, replace, remove, or add close-ups. The browser resizes and encodes uploads without the original metadata. Show the external processing notice and require consent before submission. |
+| Scan | Announce progress while manual editing stays available. After a failure, allow a retry or manual entry without losing confirmed ingredients. When the response is empty, suggest a close-up or manual entry. Ignore a response to an abandoned scan. |
+| Review | Merge the same ingredient across photos and show its sources. Allow batch confirmation of clear catalog matches. Require explicit action on every uncertain or unlinked item. Allow correction, dismissal, linking or keeping a free-text item. |
+| Results | Refresh complete recipe matches as the confirmed list changes. Show name, description, time and servings. If there is no complete match, offer a return to editing. |
+| Recipe | Show required quantities, optional ingredients, selected substitutions, equipment and directions. Ask the user to check quantities. |
 
-תוויות בעברית ו־RTL, סדר מיקוד עקבי ואזורי סטטוס לקורא מסך יאפשרו ניווט והבנה בכל שלב. אי־ודאות וכשל יסומנו בטקסט. בגלישה בנייד, בדיקות הקבלה יכסו קורא מסך, יעדי מגע וניגודיות. תשובה מאוחרת לסריקה שבוטלה או הוחלפה לא תעדכן את המסך, ותשובה תקינה לעולם לא תדרוס עריכה ידנית.
+The current interface is English and left-to-right under the English-only repository instruction. Use keyboard-accessible native controls, status announcements, readable contrast, and touch targets. Preserve the confirmed list during scan cancellation, replacement, or recovery.
 
-## נתונים וחוקים
+## Contracts
 
-| חוזה | שימוש וכללי אימות |
+| Contract | Rules |
 |---|---|
-| [מילון](../schemas/ingredient-catalog.schema.json) | מזהה יציב ב־snake_case, שם תצוגה בעברית וכינויים נפוצים. חיפוש מנרמל רווחים, ניקוד ופיסוק ומציע התאמות. התאמה מדויקת של כינוי עם שיוך יחיד יכולה לשמש לבחירה, ושיוך עמום דורש בחירה. בודקים כפילות של מזהים ושל שמות מנורמלים בנפרד מהסכמה. |
-| [רשימת מצרכים](../schemas/pantry.schema.json) | נשמרת במכשיר. `confirmedIngredientIds` כוללת אישורים למלאי הנוכחי, ו־`stapleIngredientIds` כוללת מצרכי בסיס שאושרו לשימוש חוזר. זמינות היא איחוד שתי הרשימות. אם מסירים מצרך מהזמינות, מסירים אותו משתיהן. טקסט חופשי נשמר בנפרד, וסיווגו הופך אותו לפריט מאושר עם מזהה. איפוס מוחק את כל הרשימה ומצרכי הבסיס השמורים. |
-| [מתכון](../schemas/recipe.schema.json) | כולל זמן הכנה כולל, מנות, חובה, אופציונלי, כמויות ויחידות, ציוד ושלבים. תחליף מוגדר לצד מצרך החובה עם כמות, יחידה והנחיית שימוש. מאמתים שכל מזהה קיים במילון, שכל מזהה שמצוין בשלב רשום כמצרך במתכון, ושגם אזכורים בטקסט תואמים לרשימה בבדיקת תוכן. |
-| [פלט זיהוי](../schemas/recognition.schema.json) | חוזה קנוני שהמתאם של הספק מחזיר לשרת. כל תצפית כוללת מקור, אי־ודאות ורמז קצר. תצפית משויכת מכילה מזהה מילון. תצפית חופשית מכילה שם מוצע לסקירה. כיתוב מהתמונה משמש כרמז בלבד, ומידע על כמות, טריות או תכולה נסתרת לא מתקבל כחלק מהחוזה. |
+| [Ingredient catalog](../schemas/ingredient-catalog.schema.json) | Stable snake-case IDs, English display names, and aliases. Search normalizes case, diacritics, whitespace and punctuation. Keep aliases unique after normalization to support exact selection. Fresh tomato and crushed tomatoes remain distinct. |
+| [Pantry](../schemas/pantry.schema.json) | Availability is the union of manually confirmed items and saved staples. Removing an ingredient clears it from both sets. Free-text items affect matching only after being linked to a catalog ID. Reset clears pantry and staples. |
+| [Recipe](../schemas/recipe.schema.json) | Use catalog IDs for quantities, optional items, and explicit substitution alternatives. Instructions reference catalog IDs that appear in the recipe. Editorial review checks that the wording and amounts agree. |
+| [Provider result](../schemas/recognition.schema.json) | Canonical, provider-independent observations contain a photo ID, a short clue, and an uncertainty flag. A catalog match carries an ID. An unlinked observation carries a name. Quantity, freshness and hidden contents are outside the contract. |
+| [Upload manifest](../schemas/recognition-manifest.schema.json) | POST multipart form data to `/api/recognize`. The `manifest` field contains the version, request ID and unique photo IDs. Upload parts are named `image_<imageId>`. |
+| [Recognition response](../schemas/recognition-response.schema.json) | The response includes the request ID and merged suggestions, or a typed error with a retry flag. A valid empty array is a successful scan with no detections. |
 
-נקודת הזיהוי תשתמש ב־`POST /api/recognize` עם `multipart/form-data`. השדה `manifest` מכיל [מניפסט JSON](../schemas/recognition-manifest.schema.json). כל חלק קובץ נקרא `image_<imageId>` לפי המזהה האטום שבמניפסט. השרת יוודא שיש בדיוק קובץ אחד לכל מזהה ושכל הקבצים מוצהרים, ויאמת תוכן, גודל ומספר קבצים לפני קריאה לספק. ערכי המגבלות והפורמטים המעשיים ייקבעו בעקבות ניסוי הזיהוי ובדיקות המכשירים.
+Reject unsupported or excess uploads before contacting a provider. Discard observations with unknown source or catalog IDs. An invalid response with no usable observations is a provider-output failure. Merge catalog matches by ID, retaining evidence across photos. A clear observation permits batch confirmation of its merged item. Free-text observations merge by normalized name and require review. Use photographed text solely as identification evidence.
 
-[תשובת השרת](../schemas/recognition-response.schema.json) תחזיר מזהה בקשה והצעות מאוחדות, או קוד כשל וסימון אם אפשר לנסות שוב. כאשר המזהה חסר או לא תקין, התשובה תחזיר `null` במקומו. מערך הצעות ריק בתשובה תקינה מסמן סריקה ללא זיהויים. מזהי בקשה ותמונה משמשים לקישור בתוך הסריקה ואינם כוללים שמות קבצים או פרטי משתתפים.
+## Matching rules
 
-השרת יאמת את סכמת הספק ואת מזהי התמונות, וידחה תצפיות עם מזהה מצרך שאינו במילון. אם לא נשארו תצפיות תקינות מתוך תשובה שאינה ריקה, יוחזר כשל פלט. הצעות מילון יאוחדו לפי מזהה, תוך שימור המקורות והרמזים. אם אחת התצפיות ודאית, ההצעה המאוחדת זמינה לאישור קבוצתי. הצעות חופשיות יאוחדו לפי שם מנורמל ויישארו לסקירה גם אם הופיעו בכמה תמונות. רמזים מוצגים כטקסט זמני במסך הסקירה.
+1. Use the confirmed catalog IDs, including staples deliberately added by the user.
+2. For each required ingredient, use the original if available, then the first available substitute in recipe order. Exclude the recipe when neither is available.
+3. Optional ingredients do not affect matches. Show quantities and specific substitutes. If the same product serves several roles, the user must check the total quantity needed.
+4. Order results by preparation time and then by stable recipe ID.
 
-### התאמה
-
-1. מקבלים את איחוד מזהי המלאי המאושר ומצרכי הבסיס. כפילויות ופריטים חופשיים אינם משנים את הזמינות.
-2. לכל מצרך חובה מעדיפים את המצרך המקורי כאשר הוא זמין. אחרת בוחרים את התחליף הזמין הראשון לפי הסדר במתכון. כשאין גם תחליף המתכון אינו מופיע.
-3. מצרכים אופציונליים אינם משפיעים על ההתאמה. מציגים את הכמות הנדרשת ואת התחליפים שנבחרו, כולל כמות והנחיית שימוש. אם אותו מזהה משמש בכמה רכיבים במתכון, המשתמש מתבקש לוודא שיש מספיק לכולם.
-4. ממיינים לפי `preparationMinutes` ואז לפי `id` בסדר עולה.
-
-**מקרה קבלה סינתטי.** במתכון שדורש `egg`, `tomato`, `oil` ו־`salt`, פלפל `sweet_pepper` הוא אופציונלי ועגבניות מרוסקות תקפות במקום עגבנייה רק אם המתכון מגדיר זאת. הרשימה `egg, crushed_tomatoes, oil, salt` מתאימה ותציג את התחליף. אם המלח מופיע רק כהצעה, אין התאמה. הופעה כפולה של ביצה לא משנה את התוצאה.
-
-## מצב אבן הדרך
-
-המסלול, החוזים, המילון ותוכנית המחקר זמינים לביקורת. המעבר לניסוי דורש קבלת תמונות בהסכמה, תיוג, מדידת בסיס ושמירת מדגם להערכה סופית. גישה לספק ופרסום פיילוט כפופים לאישורים שסוכמו.
+Example: eggs, crushed tomatoes, neutral cooking oil and salt match Skillet Tomato Eggs through its recipe-specific tomato substitution. Unconfirmed salt prevents the match. Duplicate eggs have no effect.
