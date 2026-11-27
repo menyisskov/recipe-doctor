@@ -1,0 +1,411 @@
+[
+  {
+    "schemaVersion": 1,
+    "id": "banana_oats",
+    "title": "Banana porridge",
+    "description": "Soft oats with mashed banana and a little milk.",
+    "preparationMinutes": 8,
+    "servings": 1,
+    "equipment": [
+      "Saucepan"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "rolled_oats", "amount": 45, "unit": "g", "substitutions": []},
+      {"ingredientId": "banana", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "milk", "amount": 180, "unit": "ml", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "cinnamon", "amount": 1, "unit": "pinch"}
+    ],
+    "steps": [
+      {"instruction": "Simmer the oats and milk over medium-low heat, stirring until soft.", "ingredientIds": ["rolled_oats", "milk"]},
+      {"instruction": "Mash the banana and stir it in. Finish with cinnamon if available.", "ingredientIds": ["banana", "cinnamon"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "avocado_toast",
+    "title": "Avocado toast",
+    "description": "Mashed avocado with lemon on crisp bread.",
+    "preparationMinutes": 7,
+    "servings": 1,
+    "equipment": [
+      "Toaster",
+      "Bowl"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "bread", "amount": 2, "unit": "piece", "substitutions": [{"ingredientId": "pita", "amount": 1, "unit": "piece", "usageNote": "Warm and split the pita, then fill it with the avocado."}]},
+      {"ingredientId": "avocado", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "lemon", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "salt", "amount": 1, "unit": "pinch", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "black_pepper", "amount": 1, "unit": "pinch"}
+    ],
+    "steps": [
+      {"instruction": "Toast the bread until crisp, or warm and split the pita if using it.", "ingredientIds": ["bread"]},
+      {"instruction": "Mash the avocado with a squeeze of lemon and salt. Spread on the bread and add pepper if available.", "ingredientIds": ["avocado", "lemon", "salt", "bread", "black_pepper"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "tomato_cucumber_salad",
+    "title": "Tomato and cucumber salad",
+    "description": "A chopped salad dressed with lemon and olive oil.",
+    "preparationMinutes": 10,
+    "servings": 2,
+    "equipment": [
+      "Knife",
+      "Mixing bowl"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "tomato", "amount": 2, "unit": "piece", "substitutions": [{"ingredientId": "cherry_tomato", "amount": 160, "unit": "g", "usageNote": "Quarter the cherry tomatoes."}]},
+      {"ingredientId": "cucumber", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "lemon", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "olive_oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 1, "unit": "pinch", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "parsley", "amount": 2, "unit": "tbsp"},
+      {"ingredientId": "sweet_pepper", "amount": 0.5, "unit": "piece"}
+    ],
+    "steps": [
+      {"instruction": "Dice the tomatoes and cucumber. Dice the bell pepper too, if available.", "ingredientIds": ["tomato", "cucumber", "sweet_pepper"]},
+      {"instruction": "Toss with lemon juice, olive oil and salt. Fold in chopped parsley if available.", "ingredientIds": ["lemon", "olive_oil", "salt", "parsley"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "tuna_corn_salad",
+    "title": "Tuna and corn salad",
+    "description": "A quick pantry lunch with sweet corn and a creamy dressing.",
+    "preparationMinutes": 9,
+    "servings": 2,
+    "equipment": [
+      "Mixing bowl",
+      "Fork"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "canned_tuna", "amount": 140, "unit": "g", "substitutions": []},
+      {"ingredientId": "canned_corn", "amount": 120, "unit": "g", "substitutions": []},
+      {"ingredientId": "mayonnaise", "amount": 2, "unit": "tbsp", "substitutions": [{"ingredientId": "yogurt", "amount": 2, "unit": "tbsp", "usageNote": "Use plain yogurt in the dressing."}]}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "spring_onion", "amount": 1, "unit": "piece"},
+      {"ingredientId": "black_pepper", "amount": 1, "unit": "pinch"}
+    ],
+    "steps": [
+      {"instruction": "Drain the tuna and corn. Flake the tuna and mix both with the mayonnaise.", "ingredientIds": ["canned_tuna", "canned_corn", "mayonnaise"]},
+      {"instruction": "If available, add sliced scallion and ground pepper.", "ingredientIds": ["spring_onion", "black_pepper"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "tomato_eggs",
+    "title": "Skillet tomato eggs",
+    "description": "Eggs cooked in a simple tomato sauce.",
+    "preparationMinutes": 20,
+    "servings": 2,
+    "equipment": [
+      "Skillet with lid"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "egg", "amount": 4, "unit": "piece", "substitutions": []},
+      {"ingredientId": "tomato", "amount": 4, "unit": "piece", "substitutions": [{"ingredientId": "crushed_tomatoes", "amount": 400, "unit": "g", "usageNote": "Use crushed tomatoes in place of chopped fresh tomatoes."}]},
+      {"ingredientId": "oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 0.5, "unit": "tsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "sweet_paprika", "amount": 0.5, "unit": "tsp"},
+      {"ingredientId": "garlic", "amount": 1, "unit": "clove"}
+    ],
+    "steps": [
+      {"instruction": "Heat the oil. If available, stir in chopped garlic briefly. Add chopped tomatoes, salt and optional paprika, then simmer until thickened.", "ingredientIds": ["oil", "garlic", "tomato", "salt", "sweet_paprika"]},
+      {"instruction": "Make four wells and crack an egg into each. Cover and cook gently until the whites and yolks are set.", "ingredientIds": ["egg"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "cheese_omelet",
+    "title": "Cheese omelet",
+    "description": "A folded omelet with melted cheese.",
+    "preparationMinutes": 10,
+    "servings": 1,
+    "equipment": [
+      "Small nonstick skillet",
+      "Whisk"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "egg", "amount": 2, "unit": "piece", "substitutions": []},
+      {"ingredientId": "yellow_cheese", "amount": 35, "unit": "g", "substitutions": [{"ingredientId": "mozzarella", "amount": 35, "unit": "g", "usageNote": "Grate the mozzarella and pat it dry before adding it."}]},
+      {"ingredientId": "butter", "amount": 1, "unit": "tsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 1, "unit": "pinch", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "spring_onion", "amount": 1, "unit": "piece"}
+    ],
+    "steps": [
+      {"instruction": "Beat the eggs with salt. Melt butter over medium-low heat and pour in the eggs.", "ingredientIds": ["egg", "salt", "butter"]},
+      {"instruction": "Once set, add the cheese and optional chopped scallion. Fold and cook briefly until the cheese melts.", "ingredientIds": ["yellow_cheese", "spring_onion"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "toast_hummus",
+    "title": "Hummus and cucumber pita",
+    "description": "A pita pocket with hummus and crisp cucumber.",
+    "preparationMinutes": 5,
+    "servings": 1,
+    "equipment": [
+      "Knife"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "pita", "amount": 1, "unit": "piece", "substitutions": [{"ingredientId": "tortilla", "amount": 1, "unit": "piece", "usageNote": "Wrap the filling in the warmed tortilla."}]},
+      {"ingredientId": "hummus_spread", "amount": 3, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "cucumber", "amount": 0.5, "unit": "piece", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "sweet_pepper", "amount": 0.5, "unit": "piece"},
+      {"ingredientId": "parsley", "amount": 1, "unit": "tbsp"}
+    ],
+    "steps": [
+      {"instruction": "Warm and split the pita, then spread hummus inside.", "ingredientIds": ["pita", "hummus_spread"]},
+      {"instruction": "Fill with sliced cucumber, plus sliced bell pepper and chopped parsley if available.", "ingredientIds": ["cucumber", "sweet_pepper", "parsley"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "chickpea_lemon_salad",
+    "title": "Lemon chickpeas",
+    "description": "Chickpeas tossed with lemon, olive oil and fresh crunch.",
+    "preparationMinutes": 10,
+    "servings": 2,
+    "equipment": [
+      "Strainer",
+      "Mixing bowl"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "canned_chickpeas", "amount": 240, "unit": "g", "substitutions": []},
+      {"ingredientId": "lemon", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "olive_oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 1, "unit": "pinch", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "cucumber", "amount": 1, "unit": "piece"},
+      {"ingredientId": "parsley", "amount": 2, "unit": "tbsp"},
+      {"ingredientId": "red_onion", "amount": 0.25, "unit": "piece"}
+    ],
+    "steps": [
+      {"instruction": "Rinse and drain the chickpeas. Toss with lemon juice, olive oil and salt.", "ingredientIds": ["canned_chickpeas", "lemon", "olive_oil", "salt"]},
+      {"instruction": "Fold in diced cucumber, chopped parsley or finely sliced red onion if available.", "ingredientIds": ["cucumber", "parsley", "red_onion"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "pantry_tomato_pasta",
+    "title": "Garlic tomato pasta",
+    "description": "Pasta coated in a thick tomato and garlic sauce.",
+    "preparationMinutes": 25,
+    "servings": 2,
+    "equipment": [
+      "Pot",
+      "Skillet"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "water", "amount": 1500, "unit": "ml", "substitutions": []},
+      {"ingredientId": "pasta", "amount": 180, "unit": "g", "substitutions": []},
+      {"ingredientId": "crushed_tomatoes", "amount": 400, "unit": "g", "substitutions": []},
+      {"ingredientId": "garlic", "amount": 2, "unit": "clove", "substitutions": []},
+      {"ingredientId": "olive_oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 0.5, "unit": "tsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "parmesan", "amount": 20, "unit": "g"},
+      {"ingredientId": "dried_oregano", "amount": 0.5, "unit": "tsp"}
+    ],
+    "steps": [
+      {"instruction": "Cook the pasta in water until tender. Reserve a small cup of the cooking water before draining.", "ingredientIds": ["pasta","water"]},
+      {"instruction": "Cook sliced garlic in olive oil briefly. Add crushed tomatoes, salt and optional oregano. Simmer until thick, toss with the pasta and loosen with cooking water as needed. Add Parmesan if available.", "ingredientIds": ["garlic", "olive_oil", "crushed_tomatoes", "salt", "dried_oregano", "pasta", "parmesan"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "carrot_lentil_soup",
+    "title": "Carrot and red lentil soup",
+    "description": "A soft, lightly spiced lentil soup.",
+    "preparationMinutes": 30,
+    "servings": 3,
+    "equipment": [
+      "Soup pot",
+      "Knife"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "water", "amount": 750, "unit": "ml", "substitutions": []},
+      {"ingredientId": "red_lentils", "amount": 150, "unit": "g", "substitutions": []},
+      {"ingredientId": "carrot", "amount": 2, "unit": "piece", "substitutions": []},
+      {"ingredientId": "onion", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 0.5, "unit": "tsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "cumin", "amount": 0.5, "unit": "tsp"},
+      {"ingredientId": "lemon", "amount": 1, "unit": "piece"}
+    ],
+    "steps": [
+      {"instruction": "Dice the onion and carrots. Soften them in the oil, adding cumin if available.", "ingredientIds": ["onion", "carrot", "oil", "cumin"]},
+      {"instruction": "Add rinsed lentils and 750 ml of water. Simmer until soft, then season with salt. Finish with lemon juice if available.", "ingredientIds": ["red_lentils","water", "salt", "lemon"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "pea_rice",
+    "title": "Rice with peas",
+    "description": "Steamed rice folded with sweet green peas.",
+    "preparationMinutes": 23,
+    "servings": 2,
+    "equipment": [
+      "Saucepan with lid"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "water", "amount": 300, "unit": "ml", "substitutions": []},
+      {"ingredientId": "white_rice", "amount": 150, "unit": "g", "substitutions": []},
+      {"ingredientId": "frozen_peas", "amount": 120, "unit": "g", "substitutions": []},
+      {"ingredientId": "oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 0.5, "unit": "tsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "spring_onion", "amount": 1, "unit": "piece"}
+    ],
+    "steps": [
+      {"instruction": "Rinse the rice. Add it to the saucepan with the oil, salt and 300 ml of water. Cover and simmer on low until almost tender.", "ingredientIds": ["white_rice","water", "oil", "salt"]},
+      {"instruction": "Stir in the peas. Cover and cook until the peas are hot and the rice is tender. Rest briefly and add sliced scallion if available.", "ingredientIds": ["frozen_peas", "spring_onion"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "potato_wedges",
+    "title": "Roasted potato wedges",
+    "description": "Crisp-edged wedges with a soft center.",
+    "preparationMinutes": 40,
+    "servings": 2,
+    "equipment": [
+      "Oven",
+      "Baking tray"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "potato", "amount": 500, "unit": "g", "substitutions": []},
+      {"ingredientId": "oil", "amount": 1, "unit": "tbsp", "substitutions": [{"ingredientId": "olive_oil", "amount": 1, "unit": "tbsp", "usageNote": "Coat the potatoes as directed."}]},
+      {"ingredientId": "salt", "amount": 0.5, "unit": "tsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "sweet_paprika", "amount": 0.5, "unit": "tsp"}
+    ],
+    "steps": [
+      {"instruction": "Heat the oven to 220 C. Cut the potatoes into even wedges and toss with oil, salt and optional paprika.", "ingredientIds": ["potato", "oil", "salt", "sweet_paprika"]},
+      {"instruction": "Spread the wedges on a tray and roast until tender and browned, turning halfway.", "ingredientIds": ["potato"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "tofu_soy_skewless",
+    "title": "Soy-glazed tofu",
+    "description": "Pan-seared tofu with a savory glaze.",
+    "preparationMinutes": 18,
+    "servings": 2,
+    "equipment": [
+      "Nonstick skillet"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "tofu", "amount": 300, "unit": "g", "substitutions": []},
+      {"ingredientId": "oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "soy_sauce", "amount": 1, "unit": "tbsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "honey", "amount": 1, "unit": "tsp"},
+      {"ingredientId": "spring_onion", "amount": 1, "unit": "piece"}
+    ],
+    "steps": [
+      {"instruction": "Pat the tofu dry, cube it and brown in the oil on several sides.", "ingredientIds": ["tofu", "oil"]},
+      {"instruction": "Lower the heat and add soy sauce and optional honey. Toss until coated. Top with sliced scallion if available.", "ingredientIds": ["soy_sauce", "honey", "spring_onion"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "apple_yogurt",
+    "title": "Apple yogurt bowl",
+    "description": "Plain yogurt with crisp apple and rolled oats.",
+    "preparationMinutes": 5,
+    "servings": 1,
+    "equipment": [
+      "Bowl",
+      "Knife"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "yogurt", "amount": 150, "unit": "g", "substitutions": [{"ingredientId": "plain_greek_yogurt", "amount": 150, "unit": "g", "usageNote": "Use it as the base of the bowl."}]},
+      {"ingredientId": "apple", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "rolled_oats", "amount": 2, "unit": "tbsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "honey", "amount": 1, "unit": "tsp"},
+      {"ingredientId": "cinnamon", "amount": 1, "unit": "pinch"}
+    ],
+    "steps": [
+      {"instruction": "Dice the apple and add it to the yogurt with rolled oats.", "ingredientIds": ["apple", "yogurt", "rolled_oats"]},
+      {"instruction": "Add honey or cinnamon if available.", "ingredientIds": ["honey", "cinnamon"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "zucchini_fritters",
+    "title": "Zucchini fritters",
+    "description": "Small skillet fritters made with grated zucchini.",
+    "preparationMinutes": 25,
+    "servings": 2,
+    "equipment": [
+      "Grater",
+      "Skillet"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "zucchini", "amount": 2, "unit": "piece", "substitutions": []},
+      {"ingredientId": "egg", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "flour", "amount": 3, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "oil", "amount": 2, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 0.5, "unit": "tsp", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "dill", "amount": 1, "unit": "tbsp"}
+    ],
+    "steps": [
+      {"instruction": "Grate the zucchini, toss with salt, let it sit briefly and squeeze out the liquid. Mix with egg, flour and optional chopped dill.", "ingredientIds": ["zucchini", "salt", "egg", "flour", "dill"]},
+      {"instruction": "Heat the oil and fry small flattened spoonfuls on both sides until browned and cooked through.", "ingredientIds": ["oil"]}
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "quinoa_herb_salad",
+    "title": "Lemon quinoa salad",
+    "description": "Fluffy quinoa with cucumber and lemon.",
+    "preparationMinutes": 24,
+    "servings": 2,
+    "equipment": [
+      "Saucepan",
+      "Mixing bowl"
+    ],
+    "requiredIngredients": [
+      {"ingredientId": "water", "amount": 300, "unit": "ml", "substitutions": []},
+      {"ingredientId": "quinoa", "amount": 150, "unit": "g", "substitutions": []},
+      {"ingredientId": "cucumber", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "lemon", "amount": 1, "unit": "piece", "substitutions": []},
+      {"ingredientId": "olive_oil", "amount": 1, "unit": "tbsp", "substitutions": []},
+      {"ingredientId": "salt", "amount": 1, "unit": "pinch", "substitutions": []}
+    ],
+    "optionalIngredients": [
+      {"ingredientId": "parsley", "amount": 2, "unit": "tbsp"},
+      {"ingredientId": "feta", "amount": 50, "unit": "g"}
+    ],
+    "steps": [
+      {"instruction": "Rinse the quinoa and simmer it in 300 ml of water until tender. Let it cool slightly.", "ingredientIds": ["quinoa","water"]},
+      {"instruction": "Mix the quinoa with diced cucumber, lemon juice, olive oil and salt. Add chopped parsley and crumbled feta if available.", "ingredientIds": ["quinoa", "cucumber", "lemon", "olive_oil", "salt", "parsley", "feta"]}
+    ]
+  }
+]
