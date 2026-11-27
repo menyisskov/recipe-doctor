@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "recognition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "observations"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "ingredientId",
+              "imageId",
+              "uncertain",
+              "clue"
+            ],
+            "properties": {
+              "kind": {
+                "const": "catalog"
+              },
+              "ingredientId": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+              },
+              "imageId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              "uncertain": {
+                "type": "boolean"
+              },
+              "clue": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "suggestedName",
+              "imageId",
+              "uncertain",
+              "clue"
+            ],
+            "properties": {
+              "kind": {
+                "const": "free_text"
+              },
+              "suggestedName": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "imageId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              "uncertain": {
+                "type": "boolean"
+              },
+              "clue": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
